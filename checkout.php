@@ -4,17 +4,17 @@
     
     $headers = "From: info@cheesenstuff.com" . "\r\n";
     $headers .= "Reply-To: info@cheesenstuff.com" . "\r\n";
-    $headers .= "CC: liamdig@berkeley.edu\r\n";
+    $headers .= "CC: no-reply@berkeley.edu\r\n";
     $headers .= "MIME-Version: 1.0\r\n";
     $headers .= "Content-Type: text/html; charset=ISO-8859-1\r\n";
     
     $message = '<html><body>';
     $message .= '<h1>Hello, Ruhi!</h1>';
-    $message .= '<p>Just testing the html email abilities</p>'
+    $message .= '<p>Just testing the html email abilities</p>';
     $message .= '</body></html>';
 
     // mail("liamdig@gmail.com",$headers,$message);
-    mail("liamdig@gmail.com", "New Sandwhich Order", $message, $headers)
+    mail("no-reply@gmail.com", "New Sandwhich Order", $message, $headers);
 
 ?>
 <!DOCTYPE html>
