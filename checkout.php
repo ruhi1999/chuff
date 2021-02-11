@@ -1,5 +1,11 @@
 <?php
     
+    function console_log( $data ){
+        echo '<script>';
+        echo 'console.log('. json_encode( $data ) .')';
+        echo '</script>';
+    }
+
     echo "hello world";
     
     $headers = "From: info@cheesenstuff.com" . "\r\n";
@@ -13,8 +19,7 @@
     $message .= '<p>Just testing the html email abilities</p>';
     $message .= '</body></html>';
 
-    // mail("liamdig@gmail.com",$headers,$message);
-    mail("no-reply@gmail.com", "New Sandwhich Order", $message, $headers);
+    console_log("Email successfully sent[true/false]: " . mail("no-reply@gmail.com", "New Sandwhich Order", $message, $headers));
 
 ?>
 <!DOCTYPE html>
